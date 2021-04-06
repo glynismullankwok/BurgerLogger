@@ -22,7 +22,7 @@ $(function() {
       
       event.preventDefault();
   
-      const burgerValue = $('#br').val().trim();
+      const burgerValue = $('#burger').val().trim();
        
    
         const newBurger = {
