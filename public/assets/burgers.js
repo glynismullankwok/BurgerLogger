@@ -22,7 +22,7 @@ $(function() {
       
       event.preventDefault();
   
-      const burgerValue = $('#burger').val().trim();
+      const burgerValue = $('#burg').val().trim();
        
    
         const newBurger = {
@@ -39,7 +39,5 @@ $(function() {
         
           location.reload();
         });
-      }
-    );
-  
-   
+      });   
+});
