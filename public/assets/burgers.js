@@ -22,11 +22,11 @@ $(function() {
       
       event.preventDefault();
   
-      const burgerValue = $('#burg').val().trim();
+      // const burgerValue = $('#burg').val().trim();
        
    
         const newBurger = {
-          burger: burgerValue,
+          burger: $("#burg").val().trim(),
           devoured: false,
         };
       

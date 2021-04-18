@@ -19,7 +19,7 @@ router.get('/', function(req, res) {
     //   devoured = 1;
     // }
 
-    burger.create(
+    Burger.create(
       ['burger', 'devoured'],
       [req.body.burger, 0],
       function(result) {
@@ -35,7 +35,7 @@ router.get('/', function(req, res) {
   
     console.log('condition', condition);
   
-    burger.update(
+    Burger.update(
       {
         devoured: req.body.devoured,
       },
@@ -53,7 +53,7 @@ router.get('/', function(req, res) {
   router.delete('/api/burgers/:id', function(req, res) {
     const condition = `id = ${req.params.id}`;
   
-    burger.delete(condition, function(result) {
+    Burger.delete(condition, function(result) {
       if (result.affectedRows == 0) {
         
         return res.status(404).end();
