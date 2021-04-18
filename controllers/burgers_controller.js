@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const burger = require('../models/burger.js');
+const Burger = require('../models/burger.js');
 
 router.get('/', function(req, res) {
-    burger.all(function(data) {
+    Burger.all(function(data) {
       const hbsObject = {
         burgers: data,
       };
@@ -14,6 +14,7 @@ router.get('/', function(req, res) {
   });
   
   router.post('/api/burgers', function(req, res) {
+    console.log("route hit");
    //let devoured = 0;
     // if (req.body.devoured === 'true') {
     //   devoured = 1;
@@ -27,7 +28,7 @@ router.get('/', function(req, res) {
        
         res.json({ id: result.insertId });
       }
-    );
+    )
   });
   
   router.put('/api/burgers/:id', function(req, res) {
@@ -64,6 +65,7 @@ router.get('/', function(req, res) {
 
 
 module.exports = router;
+
    
 
 

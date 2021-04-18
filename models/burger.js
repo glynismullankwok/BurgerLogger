@@ -24,3 +24,4 @@ const Burgers = {
   };
 
 module.exports = Burgers;
+
